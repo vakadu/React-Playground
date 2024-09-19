@@ -1,9 +1,9 @@
-import Modal from "./modal";
+import ProgressBar3 from "./progress-bar/progressbar-3";
 
 function App() {
   return (
     <div className="App">
-      <Modal />
+      <ProgressBar3 />
     </div>
   );
 }
