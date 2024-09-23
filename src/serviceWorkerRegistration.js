@@ -20,8 +20,6 @@ const isLocalhost = Boolean(
     )
 );
 
-console.log("serviceWorker" in navigator);
-
 export function register(config) {
   if ("serviceWorker" in navigator) {
     // The URL constructor is available in all browsers that support SW.

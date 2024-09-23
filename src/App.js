@@ -1,9 +1,9 @@
-import ProgressBar3 from "./progress-bar/progressbar-3";
+import Datatables from "./data-tables";
 
 function App() {
   return (
     <div className="App">
-      <ProgressBar3 />
+      <Datatables />
     </div>
   );
 }
