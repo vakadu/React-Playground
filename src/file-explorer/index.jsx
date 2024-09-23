@@ -47,11 +47,16 @@ const data = [
 
 const File = ({ d }) => {
   const [show, setShow] = useState(false);
+  const hasChildren = d.children?.length > 0;
+
   return (
-    <div onClick={() => setShow(true)}>
-      {d.name}
+    <div style={{ marginLeft: 6 }} onClick={() => setShow(true)}>
+      <span>
+        {d.name}
+        {hasChildren && <span>{show ? "-" : "+"}</span>}
+      </span>
       {show &&
-        d.children?.length > 0 &&
+        hasChildren &&
         d.children.map((c) => {
           return <File key={c.id} d={c} />;
         })}
@@ -59,11 +64,23 @@ const File = ({ d }) => {
   );
 };
 
+const sortData = (data) => {
+  return data
+    .map((item) => {
+      if (item.children) {
+        item.children = sortData(item.children);
+      }
+      return item;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+};
+
 const FileExplorer = () => {
+  const sortedData = sortData(data);
   return (
     <div>
-      {data.map((d) => {
-        return <File key={d.id} d={d} />;
+      {sortedData.map((item) => {
+        return <File key={item.id} d={item} />;
       })}
     </div>
   );

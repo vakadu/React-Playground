@@ -1,9 +1,9 @@
-import Datatables from "./data-tables";
+import Like from "./like";
 
 function App() {
   return (
     <div className="App">
-      <Datatables />
+      <Like />
     </div>
   );
 }
