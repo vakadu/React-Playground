@@ -1,9 +1,9 @@
-import Like from "./like";
+import Modal from "./modal";
 
 function App() {
   return (
     <div className="App">
-      <Like />
+      <Modal />
     </div>
   );
 }
