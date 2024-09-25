@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useHook from "./hook";
 import Image from "./img";
 
+function useOnKey(handlePrev, handleNext, last, current) {
+  useEffect(() => {
+    function onKeyDown(e) {
+      if (e.key === "ArrowRight") {
+        if (current < last - 1) {
+          handleNext();
+        }
+      }
+      if (e.key === "ArrowLeft") {
+        if (current > 0) {
+          handlePrev();
+        }
+      }
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [handleNext, handlePrev, last, current]);
+}
+
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const { data } = useHook();
 
   const handlePrev = () => {
@@ -16,7 +35,7 @@ const Carousel = () => {
   const handleNext = () => {
     setCurrentIndex(currentIndex + 1);
   };
-  console.log(data);
+  useOnKey(handlePrev, handleNext, data?.length, currentIndex);
 
   return (
     <section style={{ display: "flex", position: "relative" }}>

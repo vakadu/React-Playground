@@ -1,9 +1,9 @@
-import Modal from "./modal";
+import TransferListii from "./transfer-list/index-ii";
 
 function App() {
   return (
     <div className="App">
-      <Modal />
+      <TransferListii />
     </div>
   );
 }
