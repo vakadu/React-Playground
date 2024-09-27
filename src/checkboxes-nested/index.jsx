@@ -61,41 +61,43 @@ const Checkbox = ({ checkbox, onChange }) => {
   );
 };
 
-const Page = () => {
+const CheckboxNested = () => {
   const [checkboxes, setCheckboxes] = useState(defaultCheckboxData);
 
+  const allChildrenChecked = (children) => {
+    return children.every((child) => child.checked);
+  };
+
   const onChange = (checkbox) => {
-    const updateCheckboxes = (items, box) => {
-      return items.map((i) => {
-        if (i.id === box.id) {
-          i.checked = !i.checked;
+    function updateCheckboxes(items, box) {
+      return items.map((item) => {
+        if (item.id === box.id) {
+          const isChecked = !item.checked;
+          item.checked = isChecked;
 
-          //to check child
-          if (i.children) {
-            i.children = i.children.map((child) => ({
-              ...child,
-              checked: i.checked,
-            }));
+          if (item.children) {
+            item.children = updateChildren(item.children, isChecked);
           }
-        } else if (i.children) {
-          i.children = updateCheckboxes(i.children, box);
-          const allChildrenChecked = i.children.every((child) => child.checked);
-          const someChildrenChecked = i.children.some((child) => child.checked);
-
-          if (someChildrenChecked) {
-            i.checked = allChildrenChecked; // Parent is checked if all children are
-          } else {
-            i.checked = false; // Uncheck parent if no children are checked
-          }
-
-          //   return {
-          //     ...i,
-          //     children: updateCheckboxes(i.children, box),
-          //   };
+        } else if (item.children) {
+          item.children = updateCheckboxes(item.children, box);
+          item.checked = allChildrenChecked(item.children);
         }
-        return i;
+
+        return { ...item };
       });
-    };
+    }
+
+    function updateChildren(children, checked) {
+      return children.map((child) => {
+        return {
+          ...child,
+          checked,
+          children: child.children
+            ? updateChildren(child.children, checked)
+            : [],
+        };
+      });
+    }
 
     const updatedBoxes = updateCheckboxes(checkboxes, checkbox);
     setCheckboxes(updatedBoxes);
@@ -112,4 +114,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default CheckboxNested;

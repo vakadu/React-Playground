@@ -1,9 +1,9 @@
-import UsersDatabase from "./users-database";
+import SelectableGrids from "./selecteable-grids";
 
 function App() {
   return (
     <div className="App">
-      <UsersDatabase />
+      <SelectableGrids />
     </div>
   );
 }
