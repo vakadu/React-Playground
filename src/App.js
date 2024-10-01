@@ -1,9 +1,9 @@
-import SelectableGrids from "./selecteable-grids";
+import UseMemo from "./use-memo";
 
 function App() {
   return (
     <div className="App">
-      <SelectableGrids />
+      <UseMemo />
     </div>
   );
 }
