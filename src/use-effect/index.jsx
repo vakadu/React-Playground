@@ -5,6 +5,9 @@ import usePrev from "../use-prev/prev";
 //this is used for managing sideeffects
 //meaning data fetching, subscriptions etcc..
 
+//useeffect is asynchronous meaning it doesnt block the render
+//if there is setstate in useeffect then it might not update immediately
+
 // life cycle
 //useeffect is run after the mounting phase
 //if we give empty dependecies then it will run once after the mounting phase

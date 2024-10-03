@@ -9,6 +9,8 @@ const Clock = lazy(() => import("./clock"));
 const CodeSplit = lazy(() => import("./code-splitting"));
 const DataTables = lazy(() => import("./data-tables"));
 const FileExplorer = lazy(() => import("./file-explorer"));
+const UseCallback = lazy(() => import("./use-callback"));
+const UseLayoutEffect = lazy(() => import("./use-layouteffect"));
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/code-splitting" element={<CodeSplit />} />
           <Route path="/data-tables" element={<DataTables />} />
           <Route path="/file-explorer" element={<FileExplorer />} />
+          <Route path="/use-callback" element={<UseCallback />} />
+          <Route path="/use-layouteffect" element={<UseLayoutEffect />} />
         </Routes>
       </Router>
     </Suspense>
