@@ -17,9 +17,9 @@ import { DefaultFileIcon } from "../assets/DefaultFileIcon";
 // first selectedfile have added only content, then cahnegd to whole node for getting the heading
 
 const FileExplorer = () => {
-  const [data, setData] = useState<TreeFolder | null>(null);
+  const [data, setData] = (useState < TreeFolder) | (null > null);
   const [loading, setLoading] = useState(true);
-  const [selectedFile, setSelectedFile] = useState<TreeFile | null>(null);
+  const [selectedFile, setSelectedFile] = (useState < TreeFile) | (null > null);
 
   useEffect(() => {
     getTreeData();
@@ -41,39 +41,42 @@ const FileExplorer = () => {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ width: 300, border: "1px solid #FFF" }}>
+    <div className="grid grid-cols-3 border border-[#FFF] border-opacity-10 h-full">
+      <div className="col-span-1 border border-[#FFF] border-opacity-10 py-[20px]">
         {data?.nodes?.map((node) => {
           return (
             <File
               node={node}
               key={node?.path}
               onSelectFile={(file) => setSelectedFile(file)}
+              selectedFile={selectedFile}
             />
           );
         })}
       </div>
-      {selectedFile && selectedFile?.content?.length > 0 && (
-        <div style={{ flex: 1, padding: 20 }}>
-          <p>{selectedFile.path.split("/").pop()}</p>
-          <pre>{selectedFile?.content}</pre>
+      {selectedFile && selectedFile?.content?.length > 0 ? (
+        <div className="col-span-2 p-[20px]">
+          <p className="text-[32px] font-bold">
+            {selectedFile.path.split("/").pop()}
+          </p>
+          <div className="border border-[#FFF] border-opacity-10 p-[20px] mt-[24px]">
+            <pre>{selectedFile?.content}</pre>
+          </div>
+        </div>
+      ) : (
+        <div className="col-span-2 p-[20px] flex justify-center items-center">
+          No file selected
         </div>
       )}
     </div>
   );
 };
 
-const File = ({
-  node,
-  onSelectFile,
-}: {
-  node: TreeFile | TreeFolder;
-  onSelectFile: (node: TreeFile) => void;
-}) => {
+const File = ({ node, onSelectFile, selectedFile }) => {
   const [show, setShow] = useState(false);
   const isFolder = node.type === "folder";
-
-  const getFileIcon = (path: string) => {
+  const active = selectedFile?.path === node?.path;
+  const getFileIcon = (path) => {
     if (path.endsWith(".tsx") || path.endsWith(".ts"))
       return <TypeScriptLogo />;
     if (path.endsWith(".js")) return <JavaScriptLogo />;
@@ -83,12 +86,15 @@ const File = ({
     if (path.endsWith(".css")) return <CSSLogo />;
     return <DefaultFileIcon />;
   };
-  //   console.log(node.path.split("/").pop());
 
   return (
-    <div style={{ marginLeft: isFolder ? "0" : "20px" }}>
+    <div
+      className={`${
+        isFolder && node?.nodes.length <= 0 ? "ml-0" : "ml-[12px]"
+      } py-[6px]`}
+    >
       <div
-        style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+        className="flex items-center cursor-pointer ml-[12px]"
         onClick={() => {
           if (isFolder) {
             setShow(!show);
@@ -108,7 +114,9 @@ const File = ({
         )}
         {/* //first i have used {node.path.slice(1)} for removing the /, then i saw
         it was coming as src/, so node.path.split("/").pop() to get the last */}
-        <span style={{ marginLeft: "5px" }}>{node.path.split("/").pop()}</span>
+        <span className={`ml-[5px] ${active ? "text-white" : ""}`}>
+          {node.path.split("/").pop()}
+        </span>
       </div>
       {show &&
         isFolder &&
@@ -118,6 +126,7 @@ const File = ({
               node={node}
               key={node?.path}
               onSelectFile={(file) => onSelectFile(file)}
+              selectedFile={selectedFile}
             />
           );
         })}
