@@ -11,6 +11,8 @@ const DataTables = lazy(() => import("./data-tables"));
 const FileExplorer = lazy(() => import("./file-explorer"));
 const UseCallback = lazy(() => import("./use-callback"));
 const UseLayoutEffect = lazy(() => import("./use-layouteffect"));
+const SearchableDropdown = lazy(() => import("./searchable-dropdown"));
+const Wordle = lazy(() => import("./wordle"));
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/file-explorer" element={<FileExplorer />} />
           <Route path="/use-callback" element={<UseCallback />} />
           <Route path="/use-layouteffect" element={<UseLayoutEffect />} />
+          <Route path="/searchable-dropdown" element={<SearchableDropdown />} />
+          <Route path="/wordle" element={<Wordle />} />
         </Routes>
       </Router>
     </Suspense>
