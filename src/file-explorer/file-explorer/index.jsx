@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-import { ChevronDown } from "../assets/ChevronDown";
-import { ChevronRight } from "../assets/ChevronRight";
-import { getTree, TreeFile, TreeFolder } from "../api/getTree";
-import { TypeScriptLogo } from "../assets/TypeScriptLogo";
-import { JavaScriptLogo } from "../assets/JavaScriptLogo";
-import { JSONLogo } from "../assets/JSONLogo";
-import { MarkdownLogo } from "../assets/MarkdownLogo";
-import { HTMLLogo } from "../assets/HTMLLogo";
-import { CSSLogo } from "../assets/CSSLogo";
-import { DefaultFileIcon } from "../assets/DefaultFileIcon";
+// import { ChevronDown } from "../assets/ChevronDown";
+// import { ChevronRight } from "../assets/ChevronRight";
+import { getTree, TreeFile, TreeFolder } from "./api";
+// import { TypeScriptLogo } from "../assets/TypeScriptLogo";
+// import { JavaScriptLogo } from "../assets/JavaScriptLogo";
+// import { JSONLogo } from "../assets/JSONLogo";
+// import { MarkdownLogo } from "../assets/MarkdownLogo";
+// import { HTMLLogo } from "../assets/HTMLLogo";
+// import { CSSLogo } from "../assets/CSSLogo";
+// import { DefaultFileIcon } from "../assets/DefaultFileIcon";
 
 //intial tought is need to use recursion to loop thru the nodes
 // then needed on data varaibe to hold the state for mutations
@@ -76,16 +76,16 @@ const File = ({ node, onSelectFile, selectedFile }) => {
   const [show, setShow] = useState(false);
   const isFolder = node.type === "folder";
   const active = selectedFile?.path === node?.path;
-  const getFileIcon = (path) => {
-    if (path.endsWith(".tsx") || path.endsWith(".ts"))
-      return <TypeScriptLogo />;
-    if (path.endsWith(".js")) return <JavaScriptLogo />;
-    if (path.endsWith(".json")) return <JSONLogo />;
-    if (path.endsWith(".md")) return <MarkdownLogo />;
-    if (path.endsWith(".html")) return <HTMLLogo />;
-    if (path.endsWith(".css")) return <CSSLogo />;
-    return <DefaultFileIcon />;
-  };
+  // const getFileIcon = (path) => {
+  //   if (path.endsWith(".tsx") || path.endsWith(".ts"))
+  //     return <TypeScriptLogo />;
+  //   if (path.endsWith(".js")) return <JavaScriptLogo />;
+  //   if (path.endsWith(".json")) return <JSONLogo />;
+  //   if (path.endsWith(".md")) return <MarkdownLogo />;
+  //   if (path.endsWith(".html")) return <HTMLLogo />;
+  //   if (path.endsWith(".css")) return <CSSLogo />;
+  //   return <DefaultFileIcon />;
+  // };
 
   return (
     <div
@@ -103,7 +103,7 @@ const File = ({ node, onSelectFile, selectedFile }) => {
           }
         }}
       >
-        {isFolder ? (
+        {/* {isFolder ? (
           show ? (
             <ChevronDown />
           ) : (
@@ -111,7 +111,7 @@ const File = ({ node, onSelectFile, selectedFile }) => {
           )
         ) : (
           getFileIcon(node.path)
-        )}
+        )} */}
         {/* //first i have used {node.path.slice(1)} for removing the /, then i saw
         it was coming as src/, so node.path.split("/").pop() to get the last */}
         <span className={`ml-[5px] ${active ? "text-white" : ""}`}>

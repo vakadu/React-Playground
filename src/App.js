@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Toast from "./toast";
+import NavigationMenu from "./navigation-menu";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -33,6 +34,7 @@ function App() {
           <Route path="/searchable-dropdown" element={<SearchableDropdown />} />
           <Route path="/wordle" element={<Wordle />} />
           <Route path="/toast" element={<Toast />} />
+          <Route path="/navigation-menu" element={<NavigationMenu />} />
         </Routes>
       </Router>
     </Suspense>
