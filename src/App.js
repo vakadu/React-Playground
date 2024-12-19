@@ -2,6 +2,8 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Toast from "./toast";
 import NavigationMenu from "./navigation-menu";
+import BrowserHistory from "./browser-history";
+import NotificationQueue from "./notification-queue";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -35,6 +37,8 @@ function App() {
           <Route path="/wordle" element={<Wordle />} />
           <Route path="/toast" element={<Toast />} />
           <Route path="/navigation-menu" element={<NavigationMenu />} />
+          <Route path="/history" element={<BrowserHistory />} />
+          <Route path="/notification-queue" element={<NotificationQueue />} />
         </Routes>
       </Router>
     </Suspense>
