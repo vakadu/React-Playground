@@ -4,6 +4,8 @@ import Toast from "./toast";
 import NavigationMenu from "./navigation-menu";
 import BrowserHistory from "./browser-history";
 import NotificationQueue from "./notification-queue";
+import TaskMangement from "./task-mangagement";
+import NestedComments from "./nested-comments";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -39,6 +41,8 @@ function App() {
           <Route path="/navigation-menu" element={<NavigationMenu />} />
           <Route path="/history" element={<BrowserHistory />} />
           <Route path="/notification-queue" element={<NotificationQueue />} />
+          <Route path="/task-management" element={<TaskMangement />} />
+          <Route path="/comments" element={<NestedComments />} />
         </Routes>
       </Router>
     </Suspense>
