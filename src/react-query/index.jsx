@@ -1,20 +1,11 @@
-import useVw from "./query";
-
-const fetchPosts = async () => {
-  try {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/todos/1"
-    );
-    return response.json();
-  } catch (error) {}
-};
+import Comp1 from "./comp1";
+import Comp2 from "./comp2";
 
 export default function ReactQuery() {
-  const { data, loading } = useVw("posts", fetchPosts);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  return <div>{data?.title}</div>;
+  return (
+    <div>
+      <Comp1 />
+      <Comp2 />
+    </div>
+  );
 }

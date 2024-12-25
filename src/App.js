@@ -7,6 +7,7 @@ import NotificationQueue from "./notification-queue";
 import TaskMangement from "./task-mangagement";
 import NestedComments from "./nested-comments";
 import ReactQuery from "./react-query";
+import "./cache";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
