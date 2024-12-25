@@ -6,6 +6,7 @@ import BrowserHistory from "./browser-history";
 import NotificationQueue from "./notification-queue";
 import TaskMangement from "./task-mangagement";
 import NestedComments from "./nested-comments";
+import ReactQuery from "./react-query";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -43,6 +44,7 @@ function App() {
           <Route path="/notification-queue" element={<NotificationQueue />} />
           <Route path="/task-management" element={<TaskMangement />} />
           <Route path="/comments" element={<NestedComments />} />
+          <Route path="/react-query" element={<ReactQuery />} />
         </Routes>
       </Router>
     </Suspense>
