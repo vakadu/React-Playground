@@ -1,4 +1,4 @@
-import useVw from "./query";
+import { useQuery } from "./use-query";
 
 const fetchPosts = async () => {
   try {
@@ -10,10 +10,10 @@ const fetchPosts = async () => {
 };
 
 export default function Comp2() {
-  const { data, loading } = useVw("posts", fetchPosts);
+  const { data, isPending } = useQuery("posts", fetchPosts);
   console.log(data);
 
-  if (loading) {
+  if (isPending) {
     return <div>Loading...</div>;
   }
 

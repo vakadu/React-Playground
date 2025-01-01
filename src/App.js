@@ -8,6 +8,8 @@ import TaskMangement from "./task-mangagement";
 import NestedComments from "./nested-comments";
 import ReactQuery from "./react-query";
 import "./cache";
+import NotificationApp from "./notification-service";
+import Chat from "./chat";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -46,6 +48,8 @@ function App() {
           <Route path="/task-management" element={<TaskMangement />} />
           <Route path="/comments" element={<NestedComments />} />
           <Route path="/react-query" element={<ReactQuery />} />
+          <Route path="/notifications" element={<NotificationApp />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </Router>
     </Suspense>
