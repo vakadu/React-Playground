@@ -10,6 +10,7 @@ import ReactQuery from "./react-query";
 import "./cache";
 import NotificationApp from "./notification-service";
 import Chat from "./chat";
+import Toaster from "./toaster";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -50,6 +51,7 @@ function App() {
           <Route path="/react-query" element={<ReactQuery />} />
           <Route path="/notifications" element={<NotificationApp />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/toaster" element={<Toaster />} />
         </Routes>
       </Router>
     </Suspense>
