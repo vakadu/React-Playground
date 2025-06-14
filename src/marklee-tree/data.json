@@ -1,0 +1,100 @@
+{
+  "docId": "doc_789",
+  "content": "Meritah is the Indigenous name of what is called Africa today. Meritah Wisdom, through Meritah storytelling tradition, creates content and resources from the perspective of Meritah (African) Indigenous Civilisations as its Continent is the cradle of all civilisations. Herein, we consider that returning to the culture that governed humanity with the principles of nature, will bring a much needed holistic knowledge to result in healing, unity and strength amongst our people and humanity. Hence, we do the main work of reconnecting us to our culture and traditions through storytelling.",
+  "versionHistory": {
+    "2025-05-28": {
+      "09:00": {
+        "user": "Alice",
+        "opsSummary": "Added introduction",
+        "ops": [
+          { "type": "insert", "path": [0], "text": "Meritah is the Indigenous name of what is called Africa today. Meritah Wisdom, through Meritah storytelling tradition, creates content and resources from the perspective of Meritah (African) Indigenous Civilisations as its Continent is the cradle of all civilisations. Herein, we consider that returning to the culture that governed humanity with the principles of nature, will bring a much needed holistic knowledge to result in healing, unity and strength amongst our people and humanity. Hence, we do the main work of reconnecting us to our culture and traditions through storytelling." }
+        ]
+      },
+      "10:30": {
+        "user": "Bob",
+        "opsSummary": "Changed section heading",
+        "ops": [
+          { "type": "replace", "path": [1, "text"], "text": "Meritah is the Indigenous name of what is called Africa today" }
+        ]
+      },
+      "14:00": {
+        "user": "Alice",
+        "opsSummary": "Added use-case examples",
+        "ops": [
+          { "type": "insert", "path": [3], "text": "Example 1: ..." },
+          { "type": "insert", "path": [4], "text": "Example 2: ..." }
+        ]
+      },
+      "17:45": {
+        "user": "Eve",
+        "opsSummary": "Fixed typos and grammar",
+        "ops": [
+          { "type": "edit", "path": [2], "text": "Corrected paragraph..." }
+        ]
+      }
+    },
+    "2025-05-27": {
+      "08:15": {
+        "user": "Charlie",
+        "opsSummary": "Initial version",
+        "ops": [
+          { "type": "insert", "path": [0], "text": "My document begins here." },
+          { "type": "insert", "path": [1], "text": "Section 1 content..." },
+          { "type": "insert", "path": [2], "text": "Conclusion..." }
+        ]
+      },
+      "12:00": {
+        "user": "Bob",
+        "opsSummary": "Removed redundant section",
+        "ops": [{ "type": "delete", "path": [1] }]
+      },
+      "16:30": {
+        "user": "Alice",
+        "opsSummary": "Restructured intro",
+        "ops": [
+          { "type": "replace", "path": [0], "text": "Better introduction..." }
+        ]
+      }
+    },
+    "2025-05-26": {
+      "09:45": {
+        "user": "Eve",
+        "opsSummary": "Added metadata block",
+        "ops": [
+          {
+            "type": "insert",
+            "path": [0],
+            "text": "Title: Project Alpha\nAuthor: Eve"
+          }
+        ]
+      },
+      "11:00": {
+        "user": "Charlie",
+        "opsSummary": "Updated title",
+        "ops": [
+          {
+            "type": "replace",
+            "path": [0, "text"],
+            "text": "Title: Project Phoenix"
+          }
+        ]
+      },
+      "15:15": {
+        "user": "Bob",
+        "opsSummary": "Formatted headers",
+        "ops": [
+          {
+            "type": "style",
+            "path": [1],
+            "style": { "fontWeight": "bold", "fontSize": "18px" }
+          }
+        ]
+      },
+      "18:50": {
+        "user": "Alice",
+        "opsSummary": "Minor style tweaks",
+        "ops": [{ "type": "style", "path": [2], "style": { "italic": true } }]
+      }
+    }
+  }
+}

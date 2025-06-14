@@ -11,6 +11,9 @@ import "./cache";
 import NotificationApp from "./notification-service";
 import Chat from "./chat";
 import Toaster from "./toaster";
+import UseEffct from "./use-effect";
+import { BigBazar } from "./big-bazar-counter";
+import FormBuilder from "./form-builder";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -24,6 +27,7 @@ const UseCallback = lazy(() => import("./use-callback"));
 const UseLayoutEffect = lazy(() => import("./use-layouteffect"));
 const SearchableDropdown = lazy(() => import("./searchable-dropdown"));
 const Wordle = lazy(() => import("./wordle"));
+const MarkleeTree = lazy(() => import("./marklee-tree"));
 
 function App() {
   return (
@@ -52,6 +56,10 @@ function App() {
           <Route path="/notifications" element={<NotificationApp />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/toaster" element={<Toaster />} />
+          <Route path="/marklee-tree" element={<MarkleeTree />} />
+           <Route path="/use-effect" element={<UseEffct/>} />
+            <Route path="/big-bazar" element={<BigBazar/>} />
+            <Route path="/form-builder" element={<FormBuilder/>} />
         </Routes>
       </Router>
     </Suspense>

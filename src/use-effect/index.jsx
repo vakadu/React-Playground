@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CustomUseEffect } from "./custom";
 import usePrev from "../use-prev/prev";
+import ByRefVal from "./by-ref-val";
 
 //this is used for managing sideeffects
 //meaning data fetching, subscriptions etcc..
@@ -36,6 +37,8 @@ const fruits2 = [
   { name: "Orange", quantity: 8 },
 ];
 
+const movies = ['a', 'b', 'c'];
+
 function api() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -47,11 +50,9 @@ function api() {
 export default function UseEffct() {
   const [state, setState] = useState(fruits);
   const prev = usePrev(state);
-  console.log(prev, state);
+  const [mov, setMov] = useState(movies)
 
   const fetchData = async () => {
-    console.log("count");
-
     const data = await api();
     setState(data);
   };
@@ -68,6 +69,10 @@ export default function UseEffct() {
           {fruit.name} - Quantity: {fruit.quantity}
         </div>
       ))}
+      <div>=============</div>
+      <div>
+        <ByRefVal/>
+      </div>
     </div>
   );
 }
