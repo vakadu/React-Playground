@@ -14,6 +14,15 @@ import Toaster from "./toaster";
 import UseEffct from "./use-effect";
 import { BigBazar } from "./big-bazar-counter";
 import FormBuilder from "./form-builder";
+import JsonDiff from "./json-diff";
+import Cms from "./cms";
+import RecursiveTree from "./recursive-tree-editable";
+import CheckboxNested from "./checkboxes-nested";
+import FormRenderer from "./form-renderer";
+import JsonBuilder from "./json-builder";
+import TreeSearchExpandable from "./tree-search-with-highlight";
+import MultiSelectDropdown from "./multi-select-dropdown";
+import UndoRedo from "./undo-redo";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -57,9 +66,18 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/toaster" element={<Toaster />} />
           <Route path="/marklee-tree" element={<MarkleeTree />} />
-           <Route path="/use-effect" element={<UseEffct/>} />
-            <Route path="/big-bazar" element={<BigBazar/>} />
-            <Route path="/form-builder" element={<FormBuilder/>} />
+          <Route path="/use-effect" element={<UseEffct />} />
+          <Route path="/big-bazar" element={<BigBazar />} />
+          <Route path="/form-builder" element={<FormBuilder />} />
+          <Route path="/json-diff" element={<JsonDiff />} />
+          <Route path="/cms" element={<Cms />} />
+          <Route path="/recursive-tree" element={<RecursiveTree />} />
+          <Route path="/checkboxes-nested" element={<CheckboxNested />} />
+          <Route path="/form-renderer" element={<FormRenderer />} />
+          <Route path="/json-builder" element={<JsonBuilder />} />
+          <Route path="/tree-search-expandable" element={<TreeSearchExpandable />} />
+          <Route path="/multi-select-dropdown" element={<MultiSelectDropdown />} />
+          <Route path="/undo-redo" element={<UndoRedo />} />
         </Routes>
       </Router>
     </Suspense>
