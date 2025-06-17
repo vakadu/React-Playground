@@ -20,23 +20,30 @@
 // }
 
 export function createQueryClient() {
-    const cache = new Map();    
+    const cache = new Map();
     
-    async function fetchQuery(key, fn) {
-        if(cache.has(key)) {            
+    async function fetchQuery(key, fn, retry = 0) {
+        if(cache.has(key) && cache.get(key).status !== 'error') {           
             return cache.get(key)
         }        
 
         cache.set(key, {status: 'loading', data: null})
         
         try {
+            throw new Error("new error")
             const response = await fn();
             const responseData = await response.json()            
             cache.set(key, {status: 'success', data: responseData});
+            setTimeout(() => {
+                cache.delete(key)
+            }, 5000)
             return {status: 'success', data: responseData}
-        } catch (error) {
+        } catch (error) {            
             cache.set(key, {status: 'error', data: null, error});
-            return error
+            if(retry <= 3) {                
+                fetchQuery(key, fn, retry+1)
+            }
+            return {status: 'error', data: null, error}
         }
     }
 

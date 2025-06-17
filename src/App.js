@@ -26,6 +26,7 @@ import UndoRedo from "./undo-redo";
 import SoonerToaster from "./sooner-toast";
 import ReactSwr from "./react-query-2";
 import AppRedux from "./reduxs";
+import DebounceThrottleDemo from "./debounce-throttle";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -84,6 +85,7 @@ function App() {
           <Route path="/sooner" element={<SoonerToaster />} />
           <Route path="/react-swr" element={<ReactSwr />} />
           <Route path="/app-redux" element={<AppRedux />} />
+           <Route path="/debounce-throttle" element={<DebounceThrottleDemo />} />
         </Routes>
       </Router>
     </Suspense>
