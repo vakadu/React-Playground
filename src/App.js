@@ -23,6 +23,9 @@ import JsonBuilder from "./json-builder";
 import TreeSearchExpandable from "./tree-search-with-highlight";
 import MultiSelectDropdown from "./multi-select-dropdown";
 import UndoRedo from "./undo-redo";
+import SoonerToaster from "./sooner-toast";
+import ReactSwr from "./react-query-2";
+import AppRedux from "./reduxs";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -78,6 +81,9 @@ function App() {
           <Route path="/tree-search-expandable" element={<TreeSearchExpandable />} />
           <Route path="/multi-select-dropdown" element={<MultiSelectDropdown />} />
           <Route path="/undo-redo" element={<UndoRedo />} />
+          <Route path="/sooner" element={<SoonerToaster />} />
+          <Route path="/react-swr" element={<ReactSwr />} />
+          <Route path="/app-redux" element={<AppRedux />} />
         </Routes>
       </Router>
     </Suspense>
