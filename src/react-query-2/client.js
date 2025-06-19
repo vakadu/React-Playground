@@ -30,7 +30,7 @@ export function createQueryClient() {
         cache.set(key, {status: 'loading', data: null})
         
         try {
-            throw new Error("new error")
+            // throw new Error("new error")
             const response = await fn();
             const responseData = await response.json()            
             cache.set(key, {status: 'success', data: responseData});

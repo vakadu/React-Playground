@@ -15,7 +15,7 @@ export default function useQuery(key, fn) {
 
   async function fetchData() {
     setLoading(true);
-    const queryData = await queryClient.fetchQuery(key, fn);
+    const queryData = await queryClient.fetchQuery(key, fn);    
     setData(queryData.data);
     setLoading(false);
   }

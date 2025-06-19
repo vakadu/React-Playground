@@ -27,6 +27,7 @@ import SoonerToaster from "./sooner-toast";
 import ReactSwr from "./react-query-2";
 import AppRedux from "./reduxs";
 import DebounceThrottleDemo from "./debounce-throttle";
+import AUtoComplete from "./auto-complete";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -79,13 +80,20 @@ function App() {
           <Route path="/checkboxes-nested" element={<CheckboxNested />} />
           <Route path="/form-renderer" element={<FormRenderer />} />
           <Route path="/json-builder" element={<JsonBuilder />} />
-          <Route path="/tree-search-expandable" element={<TreeSearchExpandable />} />
-          <Route path="/multi-select-dropdown" element={<MultiSelectDropdown />} />
+          <Route
+            path="/tree-search-expandable"
+            element={<TreeSearchExpandable />}
+          />
+          <Route
+            path="/multi-select-dropdown"
+            element={<MultiSelectDropdown />}
+          />
           <Route path="/undo-redo" element={<UndoRedo />} />
           <Route path="/sooner" element={<SoonerToaster />} />
           <Route path="/react-swr" element={<ReactSwr />} />
           <Route path="/app-redux" element={<AppRedux />} />
-           <Route path="/debounce-throttle" element={<DebounceThrottleDemo />} />
+          <Route path="/debounce-throttle" element={<DebounceThrottleDemo />} />
+          <Route path="/auto-complete" element={<AUtoComplete />} />
         </Routes>
       </Router>
     </Suspense>
