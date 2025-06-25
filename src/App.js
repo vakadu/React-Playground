@@ -28,6 +28,8 @@ import ReactSwr from "./react-query-2";
 import AppRedux from "./reduxs";
 import DebounceThrottleDemo from "./debounce-throttle";
 import AUtoComplete from "./auto-complete";
+import Vscode from "./vscode";
+import DevTools from "./devtools";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -94,6 +96,8 @@ function App() {
           <Route path="/app-redux" element={<AppRedux />} />
           <Route path="/debounce-throttle" element={<DebounceThrottleDemo />} />
           <Route path="/auto-complete" element={<AUtoComplete />} />
+           <Route path="/vscode" element={<Vscode />} />
+           <Route path="/devtools" element={<DevTools />} />
         </Routes>
       </Router>
     </Suspense>
