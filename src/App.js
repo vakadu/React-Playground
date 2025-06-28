@@ -30,6 +30,7 @@ import DebounceThrottleDemo from "./debounce-throttle";
 import AUtoComplete from "./auto-complete";
 import Vscode from "./vscode";
 import DevTools from "./devtools";
+import FormBuilder2 from "./form-builder-2";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -98,6 +99,7 @@ function App() {
           <Route path="/auto-complete" element={<AUtoComplete />} />
            <Route path="/vscode" element={<Vscode />} />
            <Route path="/devtools" element={<DevTools />} />
+           <Route path="/form-builder2" element={<FormBuilder2 />} />
         </Routes>
       </Router>
     </Suspense>
