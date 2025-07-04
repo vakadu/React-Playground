@@ -31,6 +31,7 @@ import AUtoComplete from "./auto-complete";
 import Vscode from "./vscode";
 import DevTools from "./devtools";
 import FormBuilder2 from "./form-builder-2";
+import { FetchHook } from "./use-fetch";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -100,6 +101,7 @@ function App() {
            <Route path="/vscode" element={<Vscode />} />
            <Route path="/devtools" element={<DevTools />} />
            <Route path="/form-builder2" element={<FormBuilder2 />} />
+           <Route path="/use-fetch" element={<FetchHook />} />
         </Routes>
       </Router>
     </Suspense>
