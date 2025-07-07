@@ -32,6 +32,11 @@ import Vscode from "./vscode";
 import DevTools from "./devtools";
 import FormBuilder2 from "./form-builder-2";
 import { FetchHook } from "./use-fetch";
+import { DebounceFunction } from "./debounce";
+import ThrottleFunc from "./use-throttle";
+import WindowSize from "./use-windowsize";
+import FormBuilder3 from "./form-builder-3";
+import UseIntersectionObserver from "./intersection-observer";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -98,10 +103,15 @@ function App() {
           <Route path="/app-redux" element={<AppRedux />} />
           <Route path="/debounce-throttle" element={<DebounceThrottleDemo />} />
           <Route path="/auto-complete" element={<AUtoComplete />} />
-           <Route path="/vscode" element={<Vscode />} />
-           <Route path="/devtools" element={<DevTools />} />
-           <Route path="/form-builder2" element={<FormBuilder2 />} />
-           <Route path="/use-fetch" element={<FetchHook />} />
+          <Route path="/vscode" element={<Vscode />} />
+          <Route path="/devtools" element={<DevTools />} />
+          <Route path="/form-builder2" element={<FormBuilder2 />} />
+          <Route path="/use-fetch" element={<FetchHook />} />
+          <Route path="/use-debounce" element={<DebounceFunction />} />
+          <Route path="/use-throttle" element={<ThrottleFunc />} />
+          <Route path="/use-windowsize" element={<WindowSize />} />
+          <Route path="/form-builder3" element={<FormBuilder3 />} />
+          <Route path="/intersection-observer" element={<UseIntersectionObserver />} />
         </Routes>
       </Router>
     </Suspense>
