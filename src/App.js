@@ -37,6 +37,12 @@ import ThrottleFunc from "./use-throttle";
 import WindowSize from "./use-windowsize";
 import FormBuilder3 from "./form-builder-3";
 import UseIntersectionObserver from "./intersection-observer";
+import FormBuilder4 from "./form-builder-4";
+import CustomUseEffect from "./use-effect-2";
+import ReusableGrid from "./reusable-grid";
+import MultiCellSelection from "./multi-cell-selection";
+import UseClickOutside from "./use-clickoutside";
+import UseTimeout from "./use-timeout";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -111,7 +117,16 @@ function App() {
           <Route path="/use-throttle" element={<ThrottleFunc />} />
           <Route path="/use-windowsize" element={<WindowSize />} />
           <Route path="/form-builder3" element={<FormBuilder3 />} />
-          <Route path="/intersection-observer" element={<UseIntersectionObserver />} />
+          <Route path="/form-builder4" element={<FormBuilder4 />} />
+          <Route
+            path="/intersection-observer"
+            element={<UseIntersectionObserver />}
+          />
+          <Route path="/use-effect2" element={<CustomUseEffect />} />
+          <Route path="/reusable-grid" element={<ReusableGrid />} />
+          <Route path="/multicell-grid" element={<MultiCellSelection />} />
+          <Route path="/click-outside" element={<UseClickOutside />} />
+           <Route path="/use-timeout" element={<UseTimeout />} />
         </Routes>
       </Router>
     </Suspense>
