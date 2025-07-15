@@ -43,6 +43,8 @@ import ReusableGrid from "./reusable-grid";
 import MultiCellSelection from "./multi-cell-selection";
 import UseClickOutside from "./use-clickoutside";
 import UseTimeout from "./use-timeout";
+import UseStateWithHistory from "./use-state-with-history";
+import ExternalScriptComponent from "./use-script";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -126,7 +128,15 @@ function App() {
           <Route path="/reusable-grid" element={<ReusableGrid />} />
           <Route path="/multicell-grid" element={<MultiCellSelection />} />
           <Route path="/click-outside" element={<UseClickOutside />} />
-           <Route path="/use-timeout" element={<UseTimeout />} />
+          <Route path="/use-timeout" element={<UseTimeout />} />
+          <Route
+            path="/use-state-with-history"
+            element={<UseStateWithHistory />}
+          />
+          <Route
+            path="/use-script"
+            element={<ExternalScriptComponent />}
+          />
         </Routes>
       </Router>
     </Suspense>
