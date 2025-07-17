@@ -29,6 +29,11 @@ export default function CustomUseEffect() {
         if(!start) {
             setStart(!start)
         }
+
+        return () => {
+            console.log("cleanup");
+            
+        }
     }, [start])
 
     return(

@@ -45,6 +45,7 @@ import UseClickOutside from "./use-clickoutside";
 import UseTimeout from "./use-timeout";
 import UseStateWithHistory from "./use-state-with-history";
 import ExternalScriptComponent from "./use-script";
+import { CustomUseState } from "./use-state";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -136,6 +137,10 @@ function App() {
           <Route
             path="/use-script"
             element={<ExternalScriptComponent />}
+          />
+           <Route
+            path="/use-state"
+            element={<CustomUseState />}
           />
         </Routes>
       </Router>
