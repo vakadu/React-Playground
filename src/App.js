@@ -46,6 +46,7 @@ import UseTimeout from "./use-timeout";
 import UseStateWithHistory from "./use-state-with-history";
 import ExternalScriptComponent from "./use-script";
 import { CustomUseState } from "./use-state";
+import GridNavigation from "./grid-navigation";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -134,14 +135,9 @@ function App() {
             path="/use-state-with-history"
             element={<UseStateWithHistory />}
           />
-          <Route
-            path="/use-script"
-            element={<ExternalScriptComponent />}
-          />
-           <Route
-            path="/use-state"
-            element={<CustomUseState />}
-          />
+          <Route path="/use-script" element={<ExternalScriptComponent />} />
+          <Route path="/use-state" element={<CustomUseState />} />
+          <Route path="/grid-navigation" element={<GridNavigation />} />
         </Routes>
       </Router>
     </Suspense>
