@@ -49,6 +49,8 @@ import { CustomUseState } from "./use-state";
 import GridNavigation from "./grid-navigation";
 import { Riders } from "./riders";
 import TodoList from "./to-do-list";
+import IndexDB from "./indexdb";
+import TicTacToe from "./tic-tac-toe";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -142,6 +144,8 @@ function App() {
           <Route path="/grid-navigation" element={<GridNavigation />} />
           <Route path="/riders" element={<Riders />} />
           <Route path="/todo" element={<TodoList />} />
+          <Route path="/indexdb" element={<IndexDB />} />
+          <Route path="/tic-tac-toe" element={<TicTacToe />} />
         </Routes>
       </Router>
     </Suspense>
