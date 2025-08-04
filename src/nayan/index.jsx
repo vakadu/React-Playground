@@ -111,10 +111,10 @@ export default function Nayan() {
 			</div>
 
 			{/* Virtualized Thumbnails */}
-			<div style={{ background: "#111", borderTop: "2px solid #333" }}>
+			<div style={{ background: "#111", borderTop: "2px solid #333", position: 'absolute', bottom:0  }}>
 				<List
 					ref={listRef}
-					height={100}
+					height={70}
 					itemCount={totalFrames}
 					itemSize={84} // 80px width + padding
 					width={width}
