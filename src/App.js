@@ -52,6 +52,7 @@ import TodoList from "./to-do-list";
 import IndexDB from "./indexdb";
 import TicTacToe from "./tic-tac-toe";
 import Nayan from "./nayan";
+import Timer from "./timer";
 
 const Accordian = lazy(() => import("./accordian"));
 const Carousel = lazy(() => import("./carousel"));
@@ -148,6 +149,7 @@ function App() {
           <Route path="/indexdb" element={<IndexDB />} />
           <Route path="/tic-tac-toe" element={<TicTacToe />} />
           <Route path="/nayan" element={<Nayan />} />
+          <Route path="/timer" element={<Timer />} />
         </Routes>
       </Router>
     </Suspense>
