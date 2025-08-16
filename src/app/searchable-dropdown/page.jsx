@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { fruits } from "../utils";
+import { fruits } from "../../lib/utils";
 
 export default function SearchableDropdown() {
   const [selected, setSelected] = useState(null);

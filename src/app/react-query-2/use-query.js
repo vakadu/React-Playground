@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { queryClient } from ".";
+import { queryClient } from "./page";
 
 export default function useQuery(key, fn) {
   const [loading, setLoading] = useState();

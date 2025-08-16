@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { initialItems } from "../utils";
 import Fruits from "./fruits";
 import Search from "./plain";
 import CustomUseMemo from "./custom";
