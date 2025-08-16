@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\n  \"app\": {\n    \"[project]/src/app/accordian/page\": [\n      \"static/media/06ba6ef833b337bc.p.0faac26c.woff2\",\n      \"static/media/38d2f4b36264bebe.p.f260072f.woff2\"\n    ]\n  },\n  \"appUsingSizeAdjust\": false,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"
