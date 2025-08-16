@@ -131,9 +131,9 @@ const metadata = {
         shortcut: "/favicon/favicon-16x16.png",
         apple: "/favicon/apple-touch-icon.png"
     },
-    verification: {
-        google: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$site$2d$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].googleSiteVerificationId
-    },
+    // verification: {
+    //   google: siteConfig.googleSiteVerificationId,
+    // },
     openGraph: {
         url: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$site$2d$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].url,
         title: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$site$2d$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].title,
@@ -157,12 +157,12 @@ const RootLayout = async ({ children })=>{
             children: children
         }, void 0, false, {
             fileName: "[project]/src/app/layout.tsx",
-            lineNumber: 51,
+            lineNumber: 50,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 50,
+        lineNumber: 49,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

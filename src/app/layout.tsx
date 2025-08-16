@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { fonts } from "@/lib/fonts";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -20,9 +19,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon/favicon-16x16.png",
     apple: "/favicon/apple-touch-icon.png",
   },
-  verification: {
-    google: siteConfig.googleSiteVerificationId,
-  },
+  // verification: {
+  //   google: siteConfig.googleSiteVerificationId,
+  // },
   openGraph: {
     url: siteConfig.url,
     title: siteConfig.title,
