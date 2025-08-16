@@ -45,13 +45,12 @@ __turbopack_context__.s({
     "siteConfig": ()=>siteConfig
 });
 const siteConfig = {
-    title: "Next.js Starter",
-    description: "A Next.js starter template, packed with features like TypeScript, Tailwind CSS, Next-auth, Eslint, testing tools and more. Jumpstart your project with efficiency and style.",
+    title: "React Playground",
+    description: "",
     keywords: [
         "Next.js",
         "TypeScript",
-        "Tailwind CSS",
-        "Next-auth"
+        "Tailwind CSS"
     ],
     url: 'https://react-playground-kohl.vercel.app/'
 };
@@ -60,131 +59,13 @@ const siteConfig = {
 "use strict";
 
 __turbopack_context__.s({
-    "cn": ()=>cn,
-    "fruits": ()=>fruits,
-    "initialItems": ()=>initialItems,
-    "shuffle": ()=>shuffle
+    "cn": ()=>cn
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$clsx$40$2$2e$1$2e$1$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx/dist/clsx.mjs [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$tailwind$2d$merge$40$3$2e$3$2e$1$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/tailwind-merge@3.3.1/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-rsc] (ecmascript)");
 ;
 ;
 const cn = (...inputs)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$tailwind$2d$merge$40$3$2e$3$2e$1$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$clsx$40$2$2e$1$2e$1$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["clsx"])(inputs));
-const initialItems = new Array(100000).fill(0).map((_, i)=>{
-    return {
-        id: i,
-        isSelected: i === 9999
-    };
-});
-const shuffle = (array)=>{
-    for(let i = array.length - 1; i > 0; i--){
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [
-            array[j],
-            array[i]
-        ]; // Swap elements
-    }
-    return array;
-};
-const fruits = [
-    "Pineapple",
-    "Apple",
-    "Banana",
-    "Orange",
-    "Mango",
-    "Grapes",
-    "Watermelon",
-    "Strawberry",
-    "Blueberry",
-    "Raspberry",
-    "Blackberry",
-    "Cherry",
-    "Peach",
-    "Plum",
-    "Apricot",
-    "Kiwi",
-    "Papaya",
-    "Pomegranate",
-    "Lychee",
-    "Dragonfruit",
-    "Avocado",
-    "Guava",
-    "Passionfruit",
-    "Durian",
-    "Jackfruit",
-    "Cantaloupe",
-    "Honeydew",
-    "Fig",
-    "Tangerine",
-    "Clementine",
-    "Mandarin",
-    "Lemon",
-    "Lime",
-    "Coconut",
-    "Pear",
-    "Persimmon",
-    "Mulberry",
-    "Gooseberry",
-    "Cranberry",
-    "Boysenberry",
-    "Elderberry",
-    "Date",
-    "Raisin",
-    "Sultana",
-    "Starfruit",
-    "Rambutan",
-    "Longan",
-    "Nectarine",
-    "Quince",
-    "Tamarind",
-    "Soursop",
-    "Salak",
-    "Chico",
-    "Custard Apple",
-    "Acerola",
-    "Bilberry",
-    "Jabuticaba",
-    "Jujube",
-    "Langsat",
-    "Mangosteen",
-    "Marionberry",
-    "Miracle Fruit",
-    "Olive",
-    "Prickly Pear",
-    "Sapodilla",
-    "Santol",
-    "Sugar Apple",
-    "Ugli Fruit",
-    "Yuzu",
-    "Zucchini (technically a fruit)",
-    "Ackee",
-    "Amla",
-    "Buddha's Hand",
-    "Calamansi",
-    "Cherimoya",
-    "Hawthorn",
-    "Kaffir Lime",
-    "Kumquat",
-    "Lucuma",
-    "Medlar",
-    "Nance",
-    "Pepino",
-    "Pitanga",
-    "Pummelo",
-    "Rowan",
-    "Sea Buckthorn",
-    "Sloe",
-    "Surinam Cherry",
-    "White Currant",
-    "Yellow Passionfruit",
-    "Carambola",
-    "Jostaberry",
-    "Wineberry",
-    "Feijoa",
-    "Huckleberry",
-    "Loquat",
-    "Pomelo"
-];
 }),
 "[project]/src/app/layout.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -219,9 +100,9 @@ const metadata = {
         shortcut: "/favicon/favicon-16x16.png",
         apple: "/favicon/apple-touch-icon.png"
     },
-    //   verification: {
-    //     google: siteConfig.googleSiteVerificationId,
-    //   },
+    // verification: {
+    //   google: siteConfig.googleSiteVerificationId,
+    // },
     openGraph: {
         url: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$site$2d$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].url,
         title: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$site$2d$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].title,

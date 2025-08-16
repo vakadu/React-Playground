@@ -47,7 +47,7 @@ const RootLayout = async ({
 
   return (
     <html suppressHydrationWarning>
-      <body className={cn("min-h-screen font-sans", fonts)}>
+      <body className={cn("min-h-screen font-urbanist", fonts)}>
         {children}
       </body>
     </html>

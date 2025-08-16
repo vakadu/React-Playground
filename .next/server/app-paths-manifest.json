@@ -1,3 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/auto-complete/page": "app/auto-complete/page.js",
+  "/big-bazar-counter/page": "app/big-bazar-counter/page.js",
+  "/nayan/page": "app/nayan/page.js",
+  "/page": "app/page.js"
 }

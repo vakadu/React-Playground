@@ -53,7 +53,7 @@ function counterData() {
   });
 }
 
-export function BigBazar() {
+export default function BigBazar() {
   const [counters, setCounters] = useState(counterData());
   const [customers, setCustomers] = useState([]);
   const [disableCustomersButton, setDisableCustomersButton] = useState(false);
