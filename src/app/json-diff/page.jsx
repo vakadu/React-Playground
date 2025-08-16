@@ -1,4 +1,6 @@
 // Old
+'use client'
+
 const prev = {
   name: "Vinod",
   age: 30,
