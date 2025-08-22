@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/vakadu/Workspace/react-playground/src/app/layout":["static/media/a22b1dc24103c00d-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST="{\n  \"app\": {\n    \"[project]/src/app/page\": [\n      \"static/media/2314d929b596fa94-s.p.b88a81e7.woff2\"\n    ],\n    \"[project]/src/app/pagination-2/page\": [\n      \"static/media/2314d929b596fa94-s.p.b88a81e7.woff2\"\n    ]\n  },\n  \"appUsingSizeAdjust\": true,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"

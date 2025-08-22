@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const routes = [
+  { routeName: "great-frontend", name: "Great Frontend" },
   { routeName: "accordian", name: "Accordian" },
   { routeName: "auto-complete", name: "Auto Complete" },
   { routeName: "big-bazar-counter", name: "Big Bazar Counter" },
@@ -99,17 +100,18 @@ const routes = [
   { routeName: "users-database", name: "Users Database" },
   { routeName: "vscode", name: "Vscode" },
   { routeName: "wordle", name: "Wordle" },
+  { routeName: "pagination-2", name: "Pagination-2" },
 ];
 
 export default function Page() {
   return (
     <section className="px-5">
-      <h1 className="text-xl py-5 font-bold">Routes List:</h1>
+      <h1 className="py-5 text-xl font-bold">Routes List:</h1>
       <div className="grid grid-cols-5 gap-4 pb-5">
         {routes.map((route) => {
           return (
             <Link
-              className="bg-amber-800 hover:bg-amber-900 p-4 rounded-xl text-white flex justify-center items-center"
+              className="flex items-center justify-center rounded-xl bg-amber-800 p-4 text-white hover:bg-amber-900"
               key={route.name}
               href={route.routeName}
             >
