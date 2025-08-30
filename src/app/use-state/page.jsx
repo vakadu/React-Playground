@@ -33,7 +33,7 @@ function useCustomUseState(initialValue) {
   return [slots[currentSlot-1], setState]
 }
 
-export function CustomUseState() {
+export default  function CustomUseState() {
   const [fruit, setFruit] = useCustomUseState('banana');
   console.log(fruit);
   

@@ -1,5 +1,0 @@
-{
-  "/api/fake-posts/route": "app/api/fake-posts/route.js",
-  "/page": "app/page.js",
-  "/pagination-2/page": "app/pagination-2/page.js"
-}

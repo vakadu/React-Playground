@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/great-frontend/use-array/page.jsx", "src/app/great-frontend/_hooks/use-array.jsx", "src/app/great-frontend/_utils/utils.js", "src/app/great-frontend/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/great-frontend/use-array/page.jsx", "src/app/great-frontend/_hooks/use-array.jsx", "src/app/great-frontend/_utils/utils.js", "src/app/great-frontend/page.jsx", "src/app/auto-complete-2/page.jsx", "src/app/nayan/_ui/comp.jsx", "src/app/nayan/page.jsx", "src/app/nayan/vallavan-1/page.jsx", "src/app/react-use/useCookie/page.jsx", "src/app/api/fake-posts/route.js", "src/app/layout.jsx", "src/app/page.jsx", "src/app/file-explorer/file-explorer/api.js", "src/app/grid-lights/index.jsx", "src/app/react-use/useAsync/_useAsync.jsx"],
   "exclude": ["node_modules"]
 }

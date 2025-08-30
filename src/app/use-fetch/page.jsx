@@ -2,7 +2,7 @@
 
 import { useFetch } from "./hook";
 
-export function FetchHook() {
+export default function FetchHook() {
   const { data, loading, error } = useFetch(
     "https://jsonplaceholder.typicode.com/todo/1"
   );

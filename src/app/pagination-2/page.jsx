@@ -4,29 +4,31 @@ import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const LIMIT = 10;
+const LIMIT = 30;
 
 export default function Pagination2() {
   const [postsData, setPosts] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState('0');
   const [loading, setLoading] = useState(false);
   const loader = useRef();
   const [hasMore, setMore] = useState(true);
 
   useEffect(() => {
-    async function fetchData() {
+    fetchData('0');
+  }, []);
+
+  async function fetchData(nextPage) {
       setLoading(true);
       try {
         const response = await fetch(
-          `/api/fake-posts?page=${page}&limit=${LIMIT}`,
+          `/api/fake-posts?pageToken=${nextPage}&limit=${LIMIT}`,
         );
         if (!response.ok) {
           throw new Error(`Http error: ${response.status}`);
         }
-        const data = await response.json();
-        console.log(data);
-        
-        setPosts((prev) => [...prev, ...data.items]);
+        const data = await response.json();        
+        setPosts((prev) => [...prev, ...data.items]);        
+        setPage(data.nextPageToken);
         // if (data.length < LIMIT) {
         //   setMore(false);
         // }
@@ -35,17 +37,15 @@ export default function Pagination2() {
       } finally {
         setLoading(false);
       }
-    }
-
-    fetchData();
-  }, [page]);
+    }    
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         const { isIntersecting } = entry;
         if (isIntersecting) {
-          setPage((page) => page + 1);
+          fetchData(page)
+          // setPage((page) => page + 1);
         }
       },
       {
@@ -59,14 +59,12 @@ export default function Pagination2() {
 
     return () => {
       observer.disconnect();
-      observer.unobserve(loader.current);
     };
-  }, []);
+  }, [page]);
 
   function handleMore() {
     setPage((page) => page + 1);
   }
-  console.log(page);
 
   return (
     <div>

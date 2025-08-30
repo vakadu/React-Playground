@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useDebounce } from "./hook";
 
-export function DebounceFunction() {
+export default function Page() {
     const [val, setVal] = useState('');
 
     function apiCall(value) {

@@ -31,6 +31,7 @@ export default function ReusableGrid() {
     );
   };
 
+
   return (
     <div style={{ overflow: 'auto', width: '100%' }}>
       <div>
@@ -48,7 +49,7 @@ export default function ReusableGrid() {
         />
       </div>
 
-       <Grid
+       {/* <Grid
         columnCount={columns.length}
         columnWidth={52} // Column width
         height={window?.innerHeight ?? 1000} // Height of the grid viewport
@@ -57,7 +58,7 @@ export default function ReusableGrid() {
         width={window?.innerWidth ?? 1000} // Width of the grid viewport
       >
         {cellRenderer}
-      </Grid>
+      </Grid> */}
 
       {/* <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
         {rows.map((row, i) => {

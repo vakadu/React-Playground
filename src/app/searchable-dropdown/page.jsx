@@ -1,25 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { fruits } from "../../lib/utils";
 
 export default function SearchableDropdown() {
-  const [selected, setSelected] = useState(null);
-  const [show, setShow] = useState(false);
-  const [value, setValue] = useState("");
+  // const [selected, setSelected] = useState(null);
+  // const [show, setShow] = useState(false);
+  // const [value, setValue] = useState("");
 
-  const handleDropdown = (show) => {
-    setShow(show);
-  };
+  // const handleDropdown = (show) => {
+  //   setShow(show);
+  // };
 
-  const filteredFruits = fruits.filter((fruit) =>
-    fruit.toLowerCase().includes(value)
-  );
-  console.log(filteredFruits);
+  // const filteredFruits = fruits.filter((fruit) =>
+  //   fruit.toLowerCase().includes(value)
+  // );
+  // console.log(filteredFruits);
 
   return (
     <div>
-      <div
+      {/* <div
         style={{ position: "relative" }}
         onClick={() => handleDropdown(true)}
       >
@@ -57,7 +56,7 @@ export default function SearchableDropdown() {
             );
           })}
         </div>
-      )}
+      )} */}
     </div>
   );
 }

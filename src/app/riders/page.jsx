@@ -79,7 +79,7 @@ const riders = [
   { riderId: uuidv4(), price: 12, name: "samkar", status: "free", capacity: 2 },
 ];
 
-export function Riders() {
+export default function Riders() {
   const [drivers, setDrivers] = useState(riders);
   const [users, setUsers] = useState([]);
 

@@ -11,6 +11,10 @@ const routes = [
   { routeName: "/great-frontend/use-timeout", name: "Use Timeout" },
   { routeName: "/great-frontend/use-set", name: "Use Set" },
   { routeName: "/great-frontend/useWindowSize", name: "Use Window Size" },
+  { routeName: "/great-frontend/useInputControl", name: "Use Input Control" },
+  { routeName: "/great-frontend/useMediaQuery", name: "Use Media Query" },
+  { routeName: "/great-frontend/useMediatedState", name: "Use MediatedState" },
+  { routeName: "/great-frontend/datatable", name: "datatable" },
 ];
 
 export default function Index() {
@@ -95,7 +99,7 @@ export default function Index() {
   // useEffect(() => {
   //   const emitter = new EventEmitter();
   //   console.log(emitter);
-    
+
   //   function addTwoNumbers(a, b) {
   //     console.log(`The sum is ${a + b}`);
   //   }

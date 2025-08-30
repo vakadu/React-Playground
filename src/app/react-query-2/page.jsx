@@ -4,9 +4,9 @@ import Child from "./child";
 import { createQueryClient } from "./client";
 import { SwrProvider } from "./react-query";
 
-export const queryClient = createQueryClient();
+const queryClient = createQueryClient();
 
-export default function ReactSwr() {
+export default function Page() {
   return (
     <SwrProvider value={queryClient}>
       <Child />
