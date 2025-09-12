@@ -1,9 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
-import { classNames, mergeData } from "./_utils/utils";
-import { EventEmitter } from "./_utils/event-emitter";
 
 const routes = [
   { routeName: "/great-frontend/use-array", name: "Use Array" },
@@ -15,6 +12,10 @@ const routes = [
   { routeName: "/great-frontend/useMediaQuery", name: "Use Media Query" },
   { routeName: "/great-frontend/useMediatedState", name: "Use MediatedState" },
   { routeName: "/great-frontend/datatable", name: "datatable" },
+  { routeName: "/great-frontend/grid-lights", name: "grid-lights" },
+  { routeName: "/great-frontend/slideshow", name: "Slideshow" },
+  { routeName: "/great-frontend/tabs", name: "Tabs" },
+  { routeName: "/great-frontend/file-explorer", name: "file explorer" },
 ];
 
 export default function Index() {
